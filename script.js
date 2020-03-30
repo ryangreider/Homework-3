@@ -12,3 +12,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+// Option ALerts
+generateBtn.addEventListener("click", function(){
+    alert("Here's some options for your password!");
+    prompt()
+});
