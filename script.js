@@ -6,6 +6,7 @@ var uppercase = [A,B,C,D,E,F,G,H,U,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
 var SPCLcharacters = ["!","@","#","$","%",",","^","&","*","(",")","-","_","<",">","+","~"];
 
 
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -13,15 +14,22 @@ function writePassword() {
 
   passwordText.value = password;
 
+
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword, function() {
+    confirm("Create a password?");
+    if (true) { prompt("Length: How many characters will the password have? (Minimum: 8)");}
+    else { alert("Goodbye then!");}
 
-// Option ALerts
-generateBtn.addEventListener("click", function(){
-    confirm("Do you want to generate a password?");
-    if (true) prompt("Length: How many characters will your password have?")
-    
+    confirm("Will it conatin Lowercase letters?");
+    confirm("Will it also include Uppercase letters?");
+
+
+
+
 });
+
 
