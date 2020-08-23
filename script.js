@@ -23,6 +23,8 @@ function promptForLength() {
       return parseInt(userLength);
     }
   }
+
+  return 8
 }
 
 function confirmUppercase() {
@@ -78,5 +80,5 @@ function generatePassword() {
     }
 
   }
-  return password.slice(passwordLength);
+  return password.slice(0, passwordLength);
 }
